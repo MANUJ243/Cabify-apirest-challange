@@ -18,16 +18,16 @@ remove_me:
 ## Uncomment the following sections to enable docker, image building and
 ## acceptance
 
- build:
+build:
    stage: build
-   image: # Add an image to build your service
+   image: registry.gitlab.com/cabify-challenge/car-pooling-challenge-manuj243
    artifacts:
      paths:
        - bin/
    script:
      - echo do something to build the binary or whatever
 
- build_image:
+build_image:
    stage: docker
    image: docker:latest
    variables:
@@ -46,7 +46,7 @@ remove_me:
 ## Uncomment the acceptance step and do not remove or edit, this step is
 ## required for us to accept your submission!
 
- acceptance:
+acceptance:
    image: cabify/challenge:latest
    stage: acceptance
    only: 
