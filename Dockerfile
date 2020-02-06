@@ -1,12 +1,7 @@
-FROM alpine:3.8
-
-# This Dockerfile is optimized for go binaries, change it as much as necessary
-# for your language of choice.
-
-RUN apk --no-cache add ca-certificates=20190108-r0 libc6-compat=1.1.19-r10
-
+FROM openjdk:13-jdk-alpine
+VOLUME /tmp
+ARG JAVA_OPTS
+ENV JAVA_OPTS=$JAVA_OPTS
+ADD target/cabify-manuj243-test-0.0.1-SNAPSHOT.jar cabify-manuj243-test.jar
 EXPOSE 9091
-
-COPY car-pooling-challenge /
- 
-ENTRYPOINT [ "/car-pooling-challenge" ]
+ENTRYPOINT exec java $JAVA_OPTS -jar cabify-manuj243-test.jar
