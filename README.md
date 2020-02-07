@@ -1,9 +1,9 @@
-# Documentacion por: Manuel Moreno Delgado. Realización del reto.
+# Documentación por: Manuel Moreno Delgado. Realización del reto.
 En esta sección explico brevemente cuál ha sido la forma en la que he afrontado el reto.
 
 He diseñado este API REST con Spring Framework, el lenguaje de programación es Java, y el IDE que he empleado ha sido una distribución propia de Eclipse para Spring. En cuanto a la base de datos, ha sido una base de datos Relacional de H2 embebida, que se genera acorde a los entities diseñados.
 
-El modelo relacional es el siguiente: Las entidades existentes son dos, coche y grupo. 
+##El modelo relacional es el siguiente: Las entidades existentes son dos, coche y grupo. 
 
 Cada grupo tiene un id único, un atributo numérico “people” que determina la cantidad de integrantes del grupo,un atributo “fecha” que me permitirá saber en qué momento ha realizado la petición de un trayecto para poder atender a estas por orden de prioridad, y un coche asociado al grupo, que podrá ser “null” en caso de que todavía ese grupo no tenga un coche establecido.
 
