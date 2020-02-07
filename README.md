@@ -1,3 +1,18 @@
+# Documentacion por: Manuel Moreno Delgado. Realización del reto.
+En esta sección explico brevemente cuál ha sido la forma en la que he afrontado el reto.
+
+He diseñado este API REST con Spring Framework, el lenguaje de programación es Java, y el IDE que he empleado ha sido una distribución propia de Eclipse para Spring. En cuanto a la base de datos, ha sido una base de datos Relacional de H2 embebida, que se genera acorde a los entities diseñados.
+
+El modelo relacional es el siguiente: Las entidades existentes son dos, coche y grupo. 
+
+Cada grupo tiene un id único, un atributo numérico “people” que determina la cantidad de integrantes del grupo,un atributo “fecha” que me permitirá saber en qué momento ha realizado la petición de un trayecto para poder atender a estas por orden de prioridad, y un coche asociado al grupo, que podrá ser “null” en caso de que todavía ese grupo no tenga un coche establecido.
+
+Cada coche tiene un id único, y un atributo “seats” que indicara el número de plazas de las que dispone el vehículo. De manera que sabiendo el número de plazas y el número de grupos que tiene asociados en un momento dado, se pueda calcular el espacio libre en el vehículo.
+
+También indicar que no he trabajado anteriormente con Gitlab, pero si he trabajado con GitHub y Bitbucket, por lo que no me ha costado mucho entender cómo funciona. En cuanto a los procesos de build y docker del archivo .gitlab-ci.yml los he comentado, pues realmente el que es esencial es el de acceptance, dado que la imagen docker ya la he generado en local y la he pusheado directamente a la sección de Packages del repositorio.
+
+Espero haber realizado el reto correctamente, mis pruebas en local con las peticiones indicadas eran satisfactorias y por lo que he podido ver el proceso de acceptance también.
+
 # Car Pooling Service Challenge
 
 Design/implement a system to manage car pooling.
